@@ -16,7 +16,7 @@ Food insecurity poses a serious threat in todays landscape. More people are acce
 
 What food items are at each food bank? How much? When do they expire?
 
-...
+```
   -- First, food bank ID and inventory ID must be joined
   alter table inventories add fb_id numeric(9);
   update inventories set fb_id = '00001' where inv_id = '00000001';
@@ -37,13 +37,13 @@ What food items are at each food bank? How much? When do they expire?
     from food_banks
     join inventories on food_banks.fb_id = inventories.fb_id
     join food_items on inventories.food_id = food_items.food_id;
-... 
+```
 
 ### Query 2
 
 Which food bank did each donor contribute to?
 
-...
+```
 select 
   donor.don_id, 
   donor.don_fname, 
@@ -53,13 +53,13 @@ select
   food_banks.fb_name
 from donor
 JOIN food_banks on donor.don_address = food_banks.fb_address;
-...
+```
 
 ### Query 3
 
 Which farmers are associated with which food types?
 
-...
+```
 select
   farmer.far_id, 
   farmer.far_fname, 
@@ -70,13 +70,13 @@ select
   food_items.food_type
 from farmer
 join food_items on farmer.far_type = food_items.food_type;
-...
+```
 
 ### Query 4
 
 What is the shelf life of each food item?
 
-...
+```
 select
   food_items.food_id,
 	food_items.food_name,
@@ -85,17 +85,17 @@ select
 	datediff(day, food_items.expir_date, inventories.date_added) as ShelfLifeDays
 from inventories
 join food_items on inventories.food_id=food_items.food_id;
-...
+```
 
 ### Query 5
 
 How much food is available for each food type?
 
-...
+```
 select
 	food_items.food_type,
 	sum(inventories.quantity) as Quantity
 from inventories
 join food_items on inventories.food_id=food_items.food_id
 group by food_items.food_type
-...
+```
