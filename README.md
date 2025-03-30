@@ -8,7 +8,7 @@ Food insecurity poses a serious threat in todays landscape. More people are acce
 
 # Source Code
 * https://github.com/evdennis14/BSAD-384---Evan-Dennis---Final-Project/blob/main/creation-script.sql
-* [populate.sql](url)
+* https://github.com/evdennis14/BSAD-384---Evan-Dennis---Final-Project/blob/main/populate.sql
 
 # Sample Queries
 
