@@ -6,7 +6,7 @@ Food insecurity poses a serious threat in todays landscape. More people are acce
 # Milestone 2: Relational Model and Creation Scripts
 ![Screenshot 2025-03-29 at 2 20 16 PM](https://github.com/user-attachments/assets/c6820ec7-1c35-4ee4-8c69-550ac5ba23a8)
 
-Source Code: 
+Source Code: creation-script.sql
 
 # Milestone 3: Populate Script & Sample Queries
 create table restaurants_grocerystore (
